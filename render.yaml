@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: prm-insurance
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: NODE_ENV=production node dist/index.cjs
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
