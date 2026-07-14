@@ -9,6 +9,8 @@ import HomePage from "@/pages/home";
 import AutoQuotePage from "@/pages/auto-quote";
 import HomeQuotePage from "@/pages/home-quote";
 import LifeQuotePage from "@/pages/life-quote";
+import PrivacyPolicyPage from "@/pages/privacy-policy";
+import TermsPage from "@/pages/terms";
 import { ChatWidget } from "@/components/ChatWidget";
 
 function AppRouter() {
@@ -18,6 +20,8 @@ function AppRouter() {
       <Route path="/auto-quote" component={AutoQuotePage} />
       <Route path="/home-quote" component={HomeQuotePage} />
       <Route path="/life-quote" component={LifeQuotePage} />
+      <Route path="/privacy-policy" component={PrivacyPolicyPage} />
+      <Route path="/terms" component={TermsPage} />
       <Route component={NotFound} />
     </Switch>
   );

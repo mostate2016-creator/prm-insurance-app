@@ -15,6 +15,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { sendEmailNotification, formatLifeQuoteEmail } from "@/lib/emailNotify";
 import { insertLifeQuoteSchema, type InsertLifeQuote } from "@shared/schema";
 import { PerplexityAttribution } from "@/components/PerplexityAttribution";
+import { LegalFooterLinks } from "@/components/LegalFooterLinks";
 
 const US_STATES = [
   "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
@@ -133,7 +134,7 @@ export default function LifeQuotePage() {
             </Link>
           </div>
         </main>
-        <footer className="py-4 text-center"><PerplexityAttribution /></footer>
+        <footer className="py-4 text-center space-y-2"><LegalFooterLinks /><PerplexityAttribution /></footer>
       </div>
     );
   }
@@ -476,7 +477,8 @@ export default function LifeQuotePage() {
         </div>
       </main>
 
-      <footer className="py-4 text-center border-t border-border">
+      <footer className="py-4 text-center border-t border-border space-y-2">
+        <LegalFooterLinks />
         <PerplexityAttribution />
       </footer>
     </div>

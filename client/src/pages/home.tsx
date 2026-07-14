@@ -3,6 +3,7 @@ import { Car, Home, Heart, Phone, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { PerplexityAttribution } from "@/components/PerplexityAttribution";
+import { LegalFooterLinks } from "@/components/LegalFooterLinks";
 
 function PRMLogo() {
   return (
@@ -163,6 +164,9 @@ export default function HomePage() {
           <p className="text-xs text-muted-foreground mt-3">
             &copy; {new Date().getFullYear()} PRM Insurance. All rights reserved.
           </p>
+          <div className="mt-3">
+            <LegalFooterLinks />
+          </div>
           <div className="mt-4">
             <PerplexityAttribution />
           </div>

@@ -16,6 +16,7 @@ import { apiRequest } from "@/lib/queryClient";
 import { sendEmailNotification, formatAutoQuoteEmail } from "@/lib/emailNotify";
 import { insertAutoQuoteSchema, type InsertAutoQuote } from "@shared/schema";
 import { PerplexityAttribution } from "@/components/PerplexityAttribution";
+import { LegalFooterLinks } from "@/components/LegalFooterLinks";
 
 const US_STATES = [
   "AL","AK","AZ","AR","CA","CO","CT","DE","FL","GA","HI","ID","IL","IN","IA","KS","KY","LA","ME","MD",
@@ -132,7 +133,7 @@ export default function AutoQuotePage() {
             </Link>
           </div>
         </main>
-        <footer className="py-4 text-center"><PerplexityAttribution /></footer>
+        <footer className="py-4 text-center space-y-2"><LegalFooterLinks /><PerplexityAttribution /></footer>
       </div>
     );
   }
@@ -409,7 +410,8 @@ export default function AutoQuotePage() {
         </div>
       </main>
 
-      <footer className="py-4 text-center border-t border-border">
+      <footer className="py-4 text-center border-t border-border space-y-2">
+        <LegalFooterLinks />
         <PerplexityAttribution />
       </footer>
     </div>
